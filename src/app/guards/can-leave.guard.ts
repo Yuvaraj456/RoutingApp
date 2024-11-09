@@ -1,4 +1,4 @@
-import { ActivatedRouteSnapshot, CanActivateFn, CanDeactivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivateFn, CanDeactivate, RouterStateSnapshot } from '@angular/router';
 import { SecondComponent } from '../Component/second/second.component';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
