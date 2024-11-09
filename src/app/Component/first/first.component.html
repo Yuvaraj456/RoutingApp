@@ -1,0 +1,18 @@
+<ng-container>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Employee No</th>
+                <th>Employee Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employee">
+                <td>{{emp.empid}}</td>
+                <td>{{emp.empName}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</ng-container>
+<router-outlet></router-outlet>

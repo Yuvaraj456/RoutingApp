@@ -1,0 +1,41 @@
+<h1>Reactive Form</h1>
+<form [formGroup]="myForm" (ngSubmit)="SubmitForm(myForm)" style="background-color: orange;">
+    <div>
+        <input type='text' id="personId" formControlName="personId">
+        <div *ngIf="(personIdControl?.invalid && (personIdControl?.dirty ||
+         personIdControl?.touched) && personIdControl?.errors?.['isEven'])" >
+            <sup style="color:red">*</sup>
+            <span  style="color:red">PersonId is not even</span>
+        </div>
+                
+        <label for='personName'>Name</label>
+        <input type='text' id="personName" formControlName="personName"> <br>
+        <span *ngIf="(personNameControl?.invalid && (personNameControl?.dirty ||
+         personNameControl?.touched) && personNameControl?.errors?.['required'])" style="color:red">The Person name is required</span>
+    </div>
+    <div formArrayName="skills">        
+        <div *ngFor="let emp of employees.controls; let i=index" [formGroupName]="i">
+            <input  type="text" formControlName="skillId" hidden>
+            SkillName: <input  type="text" formControlName="skillName"> 
+            <span *ngIf="(emp.get('skillName')?.invalid && (emp.get('skillName')?.dirty ||
+         emp.get('skillName')?.touched) && emp.get('skillName')?.errors?.['required'])" style="color:red">The Skill Name is required</span>
+            
+            SkillLevel: <input  type="text" formControlName="skillLevel"> 
+            <span *ngIf="(emp.get('skillLevel')?.invalid && (emp.get('skillLevel')?.dirty ||
+         emp.get('skillLevel')?.touched) && emp.get('skillLevel')?.errors?.['required'])" style="color:red">The Skill level is required</span>
+            
+            <button (click)="RemoveEmp(i)">Remove</button>         
+        </div>       
+    </div>
+    <div>
+        <button type="button" (click)="AddEmp()">Add Form</button>
+        <button type="submit">Submit</button>
+        <button type="button" (click)="UpdatePerson(myForm)">Update</button> 
+        <button type="button" (click)="DeletePerson(myForm)">Delete</button>       
+    </div>
+
+</form>
+
+
+PersonId : <input type="text" name="personId" [(ngModel)]="personId"><button type="button" (click)="getPersonById()">GetPerson</button>
+<pre>{{myForm.value|json}}</pre>

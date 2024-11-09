@@ -1,0 +1,40 @@
+<!-- <div>
+<h2>{{name}}</h2>
+<h2>{{age}}</h2>
+</div> -->
+
+<div class="container">
+    <h1>Template Driven Form </h1>
+    <form #myForm="ngForm" (ngSubmit)="SubmitForm(myForm)">
+        <div class="form-element">
+            <label for="Name">Name</label>
+            <input type="text" id="Name" class="" name="Name" [(ngModel)]="Person.Name" />
+        </div>
+        <div class="form-element">
+            <label for="Age">Age</label>
+            <input type="number" id="Age" class="" name="Age" [(ngModel)]="Person.Age"  />
+        </div>
+        <div class="form-element">
+            <label for="Designation">Designation</label>
+            <input type="text" id="Designation" class="" name="Designation" [(ngModel)]="Person.Designation"   />
+        </div>
+        <div class="form-element">
+            <label for="Country">Select Country:</label>
+            <select id="Country" class="" name="Country" [(ngModel)]="Person.Country"  >
+                 <option *ngFor="let i of CountryList;" [value]="i.Value">{{i.Name}}</option>
+            </select>
+        </div>
+        <div class="form-element">
+            <label for="Country">Select State:</label>
+            <select id="Country" class="" name="State" [(ngModel)]="Person.State"  >
+                 <option *ngFor="let i of GetStateList(Person.Country)?.value" [value]="i">{{i}}</option>
+            </select>
+        </div>
+        <div class="btn-box">
+            <input type="submit" value="submit" />
+            <input type="button" value="Reset" (click)="ResetForm(myForm)">
+            <input type="button" value="Default" (click)="setDefaultValue(myForm)">
+
+        </div>
+    </form>
+</div>

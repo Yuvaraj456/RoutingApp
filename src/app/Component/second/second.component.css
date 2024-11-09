@@ -1,0 +1,96 @@
+.container {
+    width: auto;
+    height: 40%;
+    border: 1px solid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(174, 240, 240, 0.518);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container form {
+    background-color: rgba(58, 233, 160, 0.537);
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 4rem;
+    border: 1px solid;
+    justify-content: center;
+    width: 30%;
+    align-items: center;
+
+}
+
+.container form .form-element {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+
+}
+
+label {
+    display: flex;
+    margin: 0.3rem;
+    justify-self: start;
+}
+
+div input {
+    box-shadow: 0rem 0rem 2px rgb(8, 18, 4);
+    border-radius: 0.3rem;
+    width: 15rem;
+    height: 1.5rem;
+
+
+}
+
+div select {
+    box-shadow: 0rem 0rem 5px rgb(0, 0, 0);
+    border-radius: 0.3rem;
+    width: 15rem;
+    height: 1.5rem;
+
+
+}
+
+div select option {
+    box-shadow: 0rem 0rem 5px rgb(0, 0, 0);
+    border-radius: 0.3rem;
+    width: 15rem;
+    height: 1.5rem;
+    color: green;
+    font-weight: bold;
+    border: 1px solid blue;
+
+}
+
+div input[type='submit'] {
+    background-color: lawngreen;
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+
+}
+
+div input[type='button'] {
+    background-color: gold;
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+
+}
+
+.btn-box{
+    margin-top:1rem;
+    display: flex;
+    flex-direction: row;
+    padding:1rem;
+    justify-content: space-between;
+
+}
+
+.btn-box input{
+margin:0.3rem;
+}
