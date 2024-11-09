@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { NoPreloading, , provideRouter } from '@angular/router';
+import { NoPreloading, provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
