@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "RoutingApp:build:production"
+              "buildTarget": "RoutingApp:build:production"
             },
             "development": {
-              "browserTarget": "RoutingApp:build:development"
+              "buildTarget": "RoutingApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "RoutingApp:build"
+            "buildTarget": "RoutingApp:build"
           }
         },
         "test": {
